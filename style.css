@@ -1,0 +1,16 @@
+.chartdiv {
+    width: 25%;
+    height: 25%;
+    text-align: center;
+}
+
+#chart1 {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+#chart2 {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,100 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/taffydb/2.7.3/taffy-min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <select id='cid' class="ui fluid search dropdown" multiple="">
+        <option value="">Course ID</option>
+        <option value="HarvardX/CB22x/2013_Spring">HarvardX/CB22x/2013_Spring</option>
+        <option value="HarvardX/CS50x/2012">HarvardX/CS50x/2012</option>
+        <option value="HarvardX/ER22x/2013_Spring">HarvardX/ER22x/2013_Spring</option>
+        <option value="HarvardX/PH207x/2012_Fall">HarvardX/PH207x/2012_Fall</option>
+        <option value="HarvardX/PH278x/2013_Spring">HarvardX/PH278x/2013_Spring</option>
+        <option value="MITx/6.002x/2012_Fall">MITx/6.002x/2012_Fall</option>
+        <option value="MITx/6.002x/2013_Spring">MITx/6.002x/2013_Spring</option>
+        <option value="MITx/14.73x/2013_Spring">MITx/14.73x/2013_Spring</option>
+        <option value="MITx/2.01x/2013_Spring">MITx/2.01x/2013_Spring</option>
+        <option value="MITx/3.091x/2012_Fall">MITx/3.091x/2012_Fall</option>
+        <option value="MITx/3.091x/2013_Spring">MITx/3.091x/2013_Spring</option>
+        <option value="MITx/6.00x/2012_Fall">MITx/6.00x/2012_Fall</option>
+        <option value="MITx/6.00x/2013_Spring">MITx/6.00x/2013_Spring</option>
+        <option value="MITx/7.00x/2013_Spring">MITx/7.00x/2013_Spring</option>
+        <option value="MITx/8.02x/2013_Spring">MITx/8.02x/2013_Spring</option>
+        <option value="MITx/8.MReV/2013_Summer">MITx/8.MReV/2013_Summer</option>
+    </select>
+
+
+    <select id='gender' class="ui fluid search dropdown" multiple="">
+        <option value="">Gender</option>
+        <option value="m">Male</option>
+        <option value="f">Female</option>
+        <option value="o">Other</option>
+    </select>
+    <select id='edu' class="ui fluid search dropdown" multiple="">
+        <option value="">Education</option>
+        <option value="n/A">None</option>
+        <option value="Less than Secondary">Less than Secondary</option>
+        <option value="Secondary">Secondary</option>
+        <option value="Bachelor's">Bachelor's</option>
+        <option value="Master's">Master's</option>
+        <option value="Doctorate">Doctorate</option>
+    </select>
+    <select id='country' class="ui fluid search dropdown" multiple="">
+        <option value="">Country</option>
+        <option value="Australia">Australia</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="China">China</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Egypt">Egypt</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="Greece">Greece</option>
+        <option value="India">India</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="Japan">Japan</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Morocco">Morocco</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Other Africa">Other Africa</option>
+        <option value="Other East Asia">Other East Asia</option>
+        <option value="Other Europe">Other Europe</option>
+        <option value="Other Middle East/Central Asia">Other Middle East/Central Asia</option>
+        <option value="Other North & Central Amer., Caribbean">Other North & Central Amer., Caribbean</option>
+        <option value="Other Oceania">Other Oceania</option>
+        <option value="Other South America">Other South America</option>
+        <option value="Other South Asia">Other South Asia</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Philippines">Philippines</option>
+        <option value="Poland">Poland</option>
+        <option value="Portugal">Portugal</option>
+        <option value="Russian Federation">Russian Federation</option>
+        <option value="Spain">Spain</option>
+        <option value="Ukraine">Ukraine</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="United States">United States</option>
+        <option value="Unknown/Other">Unknown/Other</option>
+    </select>
+    <select id='age' class="ui fluid search dropdown" multiple="">
+        <option value="">Age Group</option>
+        <option value="(16, 25]">(16, 25]</option>
+        <option value="(25, 45]">(25, 45]</option>
+        <option value="(45, 120]">(45, 120]</option>
+        <option value="nan">nan</option>
+    </select>
+    <div class='chartdiv'>
+        <canvas id="chart1" width="400" height="400"></canvas>
+        <canvas id="chart2" width="400" height="400"></canvas>
+    </div>
+</body>
+</html>
